@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Ancho Fijo con Capas (800px)</title>
+</head>
+<body style="background-color: #e2e8f0; margin: 0; padding: 20px 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1e293b;">
+
+    <!-- Capa contenedora principal de ancho fijo de 800px y centrada -->
+    <div style="width: 800px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+
+        <!-- ENCABEZADO -->
+        <header style="background-color: #0f172a; color: #ffffff; padding: 30px 20px; text-align: center;">
+            <h1 style="margin: 0 0 10px 0; font-size: 28px;">Diseño por Capas de 800px</h1>
+            <p style="margin: 0; color: #94a3b8; font-size: 15px;">Maquetación mediante contenedores DIV y elementos semánticos HTML5</p>
+        </header>
+
+        <!-- NAVEGACIÓN -->
+        <nav style="background-color: #1e293b; padding: 12px; text-align: center; border-bottom: 1px solid #334155;">
+            <a href="#inicio" style="color: #38bdf8; text-decoration: none; margin: 0 12px; font-weight: 500;">Inicio</a> |
+            <a href="#concepto" style="color: #ffffff; text-decoration: none; margin: 0 12px; font-weight: 500;">Concepto</a> |
+            <a href="#comparativa" style="color: #ffffff; text-decoration: none; margin: 0 12px; font-weight: 500;">Tablas vs Capas</a> |
+            <a href="#contacto" style="color: #ffffff; text-decoration: none; margin: 0 12px; font-weight: 500;">Contacto</a>
+        </nav>
+
+        <!-- ÁREA PRINCIPAL (CONTENIDO + BARRA LATERAL CON FLEXBOX INLINE) -->
+        <div style="display: flex; gap: 24px; padding: 24px;">
+
+            <!-- COLUMNA PRINCIPAL DE CONTENIDO -->
+            <main style="flex: 1; min-width: 0;">
+                <article>
+                    <h2 id="concepto" style="margin-top: 0; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;">
+                        ¿Por qué usar atributos de estilo en Capas?
+                    </h2>
+                    
+                    <p style="line-height: 1.6; color: #334155;">
+                        A diferencia de la etiqueta de tablas tradicional (<code>&lt;table&gt;</code>), la cual incluye atributos nativos de HTML como <code>width="800"</code> y <code>align="center"</code>, las etiquetas de capa como <code>&lt;div&gt;</code>, <code>&lt;main&gt;</code> o <code>&lt;header&gt;</code> <strong>no poseen atributos de dimensión o alineación propios en el estándar HTML</strong>.
+                    </p>
+
+                    <div style="background-color: #f1f5f9; border-left: 4px solid #0284c7; padding: 16px; margin: 20px 0; border-radius: 0 6px 6px 0;">
+                        <p style="margin: 0; font-family: monospace; font-size: 14px; color: #0f172a;">
+                            style="width: 800px; margin: 0 auto;"
+                        </p>
+                        <p style="margin: 8px 0 0 0; font-size: 14px; color: #475569;">
+                            Para definir píxeles exactos y centrar el contenedor en pantalla utilizando capas, es necesario recurrir a la propiedad CSS en línea mencionada arriba.
+                        </p>
+                    </div>
+
+                    <h3 id="comparativa" style="color: #0f172a;">Beneficios del Diseño por Capas</h3>
+                    <ul style="line-height: 1.8; color: #334155; padding-left: 20px;">
+                        <li><strong>Estructura Limpia:</strong> Separa el contenido semántico de la maquetación.</li>
+                        <li><strong>Flexibilidad:</strong> Permite organizar componentes lado a lado con mayor facilidad (usando <code>display: flex</code>).</li>
+                        <li><strong>Mantenimiento:</strong> Facilita la adaptación progresiva hacia diseños modernos.</li>
+                    </ul>
+                </article>
+            </main>
+
+            <!-- BARRA LATERAL (SIDEBAR) -->
+            <aside style="width: 220px; background-color: #f8fafc; padding: 18px; border-radius: 6px; border: 1px solid #e2e8f0; flex-shrink: 0;">
+                <h3 style="margin-top: 0; font-size: 16px; color: #0f172a;">Ficha Técnica</h3>
+                
+                <p style="font-size: 14px; color: #475569; margin-bottom: 8px;"><strong>Ancho Contenedor:</strong><br>800 píxeles</p>
+                <p style="font-size: 14px; color: #475569; margin-bottom: 8px;"><strong>Centrado:</strong><br><code>margin: 0 auto</code></p>
+                <p style="font-size: 14px; color: #475569; margin-bottom: 8px;"><strong>Layout:</strong><br>Capas + Flexbox</p>
+                
+                <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 16px 0;">
+
+                <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #0f172a;">Enlaces de Interés</h4>
+                <ul style="padding-left: 16px; margin: 0; font-size: 13px; color: #0284c7;">
+                    <li><a href="#" style="color: #0284c7;">Etiquetas HTML5</a></li>
+                    <li><a href="#" style="color: #0284c7;">Contenedores DIV</a></li>
+                    <li><a href="#" style="color: #0284c7;">Estilos en línea</a></li>
+                </ul>
+            </aside>
+
+        </div>
+
+        <!-- PIE DE PÁGINA -->
+        <footer style="background-color: #0f172a; color: #94a3b8; text-align: center; padding: 16px; font-size: 14px; border-top: 1px solid #1e293b;">
+            <p style="margin: 0;">&copy; 2026 Página de Ancho Fijo por Capas (800px). Todos los derechos reservados.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
