@@ -1,0 +1,23 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Mi centro educativo</title>
+
+    <style>
+        h1 {
+            color: blue;
+            font-size: 32px;
+        }
+
+        h2 {
+            color: orange;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        body p:last-child {
+            text-align: center;
+        }
+    </style>
+</head>
